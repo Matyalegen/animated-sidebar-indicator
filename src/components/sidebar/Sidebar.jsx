@@ -4,35 +4,36 @@ import './sidebar.scss';
 //import smart_rs from './public/smart_rs.png'
 
 const sidebarNavItems = [
+    
     {
         display: 'Dashboard',
         icon: <i className='bx bx-home'></i>,
-        to: '/',
+        to: '',
         section: ''
     },
     {
         display: 'Asset Acquistion',
         icon: <i className='bx bx-star'></i>,
-        to: '/started',
-        section: 'started'
+        to: '/acquistion',
+        section: 'acquistion'
     },
     {
         display: 'Asset Utilization',
-        icon: <i className='bx bx-calendar'></i>,
-        to: '/calendar',
-        section: 'calendar'
+        icon: <i className='bx bx-revision'></i>,
+        to: '/utilization',
+        section: 'utilization'
     },
     {
         display: 'Asset Maintenance',
         icon: <i className='bx bx-user'></i>,
-        to: '/user',
-        section: 'user'
+        to: '/maintenance',
+        section: 'maintenance'
     },
     {
         display: 'Asset Dispossal',
-        icon: <i className='bx bx-receipt'></i>,
-        to: '/order',
-        section: 'order'
+        icon: <i className='bx bx-trash'></i>,
+        to: '/disposal',
+        section: 'disposal'
     },
     
     
@@ -62,7 +63,7 @@ const Sidebar = () => {
 
     return <div className='sidebar'>
         <div className="sidebar__logo">
-       Smart_RS
+        <img src="logo_smart_rs.png" alt="Smart_Rs"/>
         </div>
         <div ref={sidebarRef} className="sidebar__menu">
             <div

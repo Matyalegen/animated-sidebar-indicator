@@ -2,18 +2,22 @@ import './App.scss';
 import 'boxicons/css/boxicons.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AppLayout from './components/layout/AppLayout';
-import Blank from './pages/Blank';
+import Dashboard from './pages/Dashboard';
+import Acquistion from './pages/Acquistion';
+import Utilization from './pages/Utilization';
+import Maintenance from './pages/Maintenance';
+import Disposal from './pages/Disposal';
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<AppLayout />}>
-                    <Route index element={<Blank />} />
-                    <Route path='/started' element={<Blank />} />
-                    <Route path='/calendar' element={<Blank />} />
-                    <Route path='/user' element={<Blank />} />
-                    <Route path='/order' element={<Blank />} />
+                    <Route index element={<Dashboard />} />
+                    <Route path='/acquistion' element={<Acquistion />} />
+                    <Route path='/utilization' element={<Utilization />} />
+                    <Route path='/maintenance' element={<Maintenance />} />
+                    <Route path='/disposal' element={<Disposal />} />
                 </Route>
             </Routes>
         </BrowserRouter>
