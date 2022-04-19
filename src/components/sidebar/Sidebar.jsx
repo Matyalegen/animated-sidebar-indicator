@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './sidebar.scss';
+//import smart_rs from './public/smart_rs.png'
 
 const sidebarNavItems = [
     {
@@ -10,29 +11,31 @@ const sidebarNavItems = [
         section: ''
     },
     {
-        display: 'Getting Started',
+        display: 'Asset Acquistion',
         icon: <i className='bx bx-star'></i>,
         to: '/started',
         section: 'started'
     },
     {
-        display: 'Calendar',
+        display: 'Asset Utilization',
         icon: <i className='bx bx-calendar'></i>,
         to: '/calendar',
         section: 'calendar'
     },
     {
-        display: 'User',
+        display: 'Asset Maintenance',
         icon: <i className='bx bx-user'></i>,
         to: '/user',
         section: 'user'
     },
     {
-        display: 'Orders',
+        display: 'Asset Dispossal',
         icon: <i className='bx bx-receipt'></i>,
         to: '/order',
         section: 'order'
     },
+    
+    
 ]
 
 const Sidebar = () => {
@@ -59,7 +62,7 @@ const Sidebar = () => {
 
     return <div className='sidebar'>
         <div className="sidebar__logo">
-            Animate
+       Smart_RS
         </div>
         <div ref={sidebarRef} className="sidebar__menu">
             <div
