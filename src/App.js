@@ -1,15 +1,19 @@
 import './App.scss';
 import 'boxicons/css/boxicons.min.css';
+//import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AppLayout from './components/layout/AppLayout';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
 import Acquistion from './pages/Acquistion';
 import Utilization from './pages/Utilization';
 import Maintenance from './pages/Maintenance';
 import Disposal from './pages/Disposal';
+import ListEmployeeComponent from './pages/ListEmployeeComponent';
 
 function App() {
     return (
+
+        
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<AppLayout />}>
