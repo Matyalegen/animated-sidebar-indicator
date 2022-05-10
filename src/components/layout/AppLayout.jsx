@@ -7,7 +7,6 @@ const AppLayout = () => {
     }}>
         <Sidebar />
         <Outlet />
-    </div>;
-};
-
+        </div>
+}
 export default AppLayout;

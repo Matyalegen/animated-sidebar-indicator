@@ -12,7 +12,7 @@ class ListEmployeeComponent extends Component {
   }
 componentDidMount(){
   EmployeeService.getEmployees().then((res) =>{
-      this.setState({employee: res.data});
+      this.setState({employees: res.data});
       console.log(res.data);
   });
 }
@@ -24,7 +24,7 @@ componentDidMount(){
           <table className="table table-striped table-bordered"> 
 
               <thead>
-                <tr>
+                <tr> 
                     <th>Employee First Name</th>
                     <th>Employee Last Name</th>
                     <th>Employee Email Id</th>
@@ -37,8 +37,8 @@ componentDidMount(){
                       this.state.employees.map(
                         employee =>
                         <tr key={employee.id}>
-                            <td>{employee.firstname}</td>
-                            <td>{employee.lastname}</td>
+                            <td>{employee.firstName}</td>
+                            <td>{employee.lastName}</td>
                             <td>{employee.emailId}</td>   
                         </tr>
                       )
